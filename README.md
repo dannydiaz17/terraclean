@@ -15,30 +15,28 @@ Faced with a critical data loss scenario, I tackled a seemingly insurmountable c
 
 Seeking an efficient data acquisition method, I explored alternatives to manual extraction. Through web research, I discovered Beautiful Soup 4, which allowed me to analyze the target website's HTML structure and identify the tags encapsulating the desired data points (image, title, description). With this "map" in place, I focused on data output formatting. Recognizing the need for WooCommerce product CSV import on their new website, I tailored the data format accordingly.
 
-![WooCommerce CSV Format](https://woo.com/document/product-csv-import-suite-column-header-reference/)
+[WooCommerce CSV Format](https://woo.com/document/product-csv-import-suite-column-header-reference/)
 
 ### Coding
 
-#### Key Components:
+#### Features:
 
 ##### Data Extraction:
-	*requests.get: Downloads the HTML content from each URL.
-	*BeautifulSoup: Parses the HTML using the 'html.parser' library.
-	*Specific tag selection: Identifies relevant data points based on HTML structure using 
-	class names and text extraction.
-	*Example: Extracts part number from h3 element's span and description from div element.
+	requests.get: Downloads the HTML content from each URL.
+	BeautifulSoup: Parses the HTML using the 'html.parser' library.
+	Specific tag selection: Identifies relevant data points based on HTML structure using class names and text extraction.
+
+		*Example: Extracts part number from h3 element's span and description from div element.
 ##### Data Processing:
-	*make_spreadsheet: Converts extracted data to a Pandas dataframe with named columns.
-	*to_csv: Saves the dataframe as "terraclean.csv" without row indexes.
+	make_spreadsheet: Converts extracted data to a Pandas dataframe with named columns.
+	to_csv: Saves the dataframe as "terraclean.csv" without row indexes.
 ##### Error Handling:
-	*try-except: Catches any exceptions during data retrieval and prints the error message.
+	try-except: Catches any exceptions during data retrieval and prints the error message.
 ##### Looping and Progress Reporting:
-	*Iterates through the list of URLs in "sites.txt".
-	*Prints progress counter with current and total URL count.
+	Iterates through the list of URLs in "sites.txt".
+	Prints progress counter with current and total URL count.
 ##### Technical Skills Demonstrated:
-	*Python programming basics (imports, variables, functions, loops)
-	*Web scraping with requests and Beautiful Soup
-	*Data manipulation with Pandas
-	*Error handling and exception management
-
-
+	Python programming basics (imports, variables, functions, loops)
+	Web scraping with requests and Beautiful Soup
+	Data manipulation with Pandas
+	Error handling and exception management
