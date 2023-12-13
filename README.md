@@ -1,4 +1,7 @@
 # Project Details
+
+![TerraClean](https://github.com/dannydiaz17/terraclean/blob/main/terraclean.png)
+
 ### Welcome
 
 I was tasked with the repair of [TerraClean's](https://terraclean.net) product database, as it had been compromised.
@@ -21,7 +24,8 @@ Seeking an efficient data acquisition method, I explored alternatives to manual 
 ##### Data Extraction:
 	*requests.get: Downloads the HTML content from each URL.
 	*BeautifulSoup: Parses the HTML using the 'html.parser' library.
-	*Specific tag selection: Identifies relevant data points based on HTML structure using class names and text extraction.
+	*Specific tag selection: Identifies relevant data points based on HTML structure using
+													 class names and text extraction.
 	*Example: Extracts part number from h3 element's span and description from div element.
 ##### Data Processing:
 	*make_spreadsheet: Converts extracted data to a Pandas dataframe with named columns.
